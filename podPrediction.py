@@ -23,8 +23,13 @@ if not openai_key:
 ai_client = openai.OpenAI(api_key=openai_key)
 
 # Streamlit UI Header
-st.title("Smart Performance Forecasting for OpenShift Pods")
-st.title("By Devesh Kumar")
+st.title("Devesh Kumar")
+st.subheader("Smart Performance Forecasting for OpenShift Pods")
+st.write(
+    "This application predicts the optimal number of pods required in OpenShift "
+    "based on LoadRunner performance data. It considers factors like TPS (transactions per second), "
+    "CPU and memory usage per pod, and threshold limits to recommend the best scaling strategy."
+)
 
 # Upload CSV File (LoadRunner Report)
 uploaded_csv = st.file_uploader("Upload LoadRunner Performance Report", type=["csv"])
