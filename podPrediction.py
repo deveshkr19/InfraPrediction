@@ -8,13 +8,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 from sklearn.ensemble import IsolationForest
-from dotenv import load_dotenv
 import openai
 from pathlib import Path
+import streamlit as st
 
-# Load API Key securely from .env file
-# Read API Key from environment variable
-openai_key = os.environ.get("OPENAI_API_KEY")
+# Retrieve API Key from Streamlit Secrets
+openai_key = st.secrets["OPENAI_API_KEY"]
 
 # Ensure API key is set
 if not openai_key:
