@@ -37,7 +37,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 
 # Display developer name in small font at the bottom
 st.markdown(
-    "<p style='font-size:12px; text-align:center; color:gray;'>Developed by Devesh Kumar</p>",
+    "<p style='font-size:18px; text-align:center; color:gray;'>Developed by Devesh Kumar</p>",
     unsafe_allow_html=True
 )
 
