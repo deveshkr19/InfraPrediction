@@ -13,12 +13,12 @@ import openai
 from pathlib import Path
 
 # Load API Key securely from .env file
-dotenv_path = Path(__file__).parent / 'key.env'
-load_dotenv(dotenv_path=dotenv_path)
+# Read API Key from environment variable
+openai_key = os.environ.get("OPENAI_API_KEY")
 
-openai_key = os.getenv("OPENAI_API_KEY")
+# Ensure API key is set
 if not openai_key:
-    raise Exception("OpenAI key not found. Verify environment file.")
+    raise Exception("API key not found. Please set the OPENAI_API_KEY environment variable.")
 
 # Initialize OpenAI Client
 ai_client = openai.OpenAI(api_key=openai_key)
