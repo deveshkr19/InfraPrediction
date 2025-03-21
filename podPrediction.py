@@ -23,12 +23,22 @@ if not openai_key:
 ai_client = openai.OpenAI(api_key=openai_key)
 
 # Streamlit UI Header
-st.title("Devesh Kumar")
-st.subheader("Smart Performance Forecasting for OpenShift Pods")
+st.title("Smart Performance Forecasting for OpenShift Pods")
+
+# App Description
 st.write(
-    "This application predicts the optimal number of pods required in OpenShift "
-    "based on LoadRunner performance data. It considers factors like TPS (transactions per second), "
-    "CPU and memory usage per pod, and threshold limits to recommend the best scaling strategy."
+    "This application predicts the optimal number of pods required in OpenShift based on LoadRunner performance data. "
+    "It considers factors like TPS (transactions per second), CPU and memory usage per pod, and threshold limits "
+    "to recommend the best scaling strategy."
+)
+
+# Add some spacing before showing the name
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Display developer name in small font at the bottom
+st.markdown(
+    "<p style='font-size:12px; text-align:center; color:gray;'>Developed by Devesh Kumar</p>",
+    unsafe_allow_html=True
 )
 
 # Upload CSV File (LoadRunner Report)
